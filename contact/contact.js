@@ -25,14 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Form submission
-  /*
-  const contactForm = document.getElementById('contactForm');
+
+  const contactForm = document.getElementById("contactForm");
   if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
       handleFormSubmit(this);
     });
-  }*/
+  }
 
   // Smooth scroll for anchor links
   const anchorLinks = document.querySelectorAll('a[href^="#"]');
@@ -63,34 +63,36 @@ function handleFormSubmit(form) {
   submitBtn.disabled = true;
   submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
-  // Collect form data
-  const data = {
-    firstName: formData.get("firstName"),
-    lastName: formData.get("lastName"),
-    email: formData.get("email"),
-    phone: formData.get("phone") || "Not provided",
-    reason: formData.get("reason"),
-    message: formData.get("message"),
-    timestamp: new Date().toISOString(),
-  };
-
-  // Here you would normally send the data to your server
-  // For now, we'll simulate a successful submission
-  simulateFormSubmission(data)
+  // Submit to Formspree
+  fetch("https://formspree.io/f/xpwovnkl", {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  })
     .then((response) => {
-      // Success
-      showFormMessage(
-        "success",
-        "Thank you for your message! We'll get back to you within 24-48 hours."
-      );
-      form.reset();
-      document.getElementById("charCount").textContent = "0";
+      if (response.ok) {
+        // Success
+        showFormMessage(
+          "success",
+          "Thank you for your message! We'll get back to you within 24-48 hours."
+        );
+        form.reset();
+        document.getElementById("charCount").textContent = "0";
+      } else {
+        // Error from Formspree
+        return response.json().then((data) => {
+          throw new Error(data.error || "Form submission failed");
+        });
+      }
     })
     .catch((error) => {
       // Error
+      console.error("Form submission error:", error);
       showFormMessage(
         "error",
-        "Oops! Something went wrong. Please try again or call us directly at (203) 555-0100."
+        "Oops! Something went wrong. Please try again or call us directly at (203) 360-9370."
       );
     })
     .finally(() => {
@@ -98,23 +100,6 @@ function handleFormSubmit(form) {
       submitBtn.disabled = false;
       submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
     });
-}
-
-// Simulate form submission (replace with actual server request)
-function simulateFormSubmission(data) {
-  return new Promise((resolve, reject) => {
-    // Log the data (in production, this would be sent to your server)
-    console.log("Form submission data:", data);
-
-    // Simulate network delay
-    setTimeout(() => {
-      // Simulate successful submission
-      resolve({ success: true });
-
-      // To simulate an error, use:
-      // reject({ error: 'Submission failed' });
-    }, 1500);
-  });
 }
 
 // Show form message
