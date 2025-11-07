@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who we are</title>
+    <link rel="stylesheet" href="./about.css" />
+    <!-- <link rel="stylesheet" href="./../style.css" /> -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="./../fsbcLogoRemovebg.png" />
+  </head>
+  <body>
+    <custom-navbar></custom-navbar>
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section section">
+            <div class="heroContainer">
+                <h1>Who We Are</h1>
+                <p class="hero-description">
+    To lead people to become fully devoted followers of Christ.
+                </p>
+                <div class="divider-line"></div>
+                <p class="hero-subdescription">
+    That's how we're able to make a difference. And it's the driving force behind everything we do.
+                </p>
+            </div>
+        </section>
+        <!-- History Section -->
+        <section class="history-section section" >
+            <div class="history-container">
+                <div class="history-text">
+                    <h2>Our Story</h2>
+                    <p>
+Since its founding in 2002, the French Speaking Baptist Church of Connecticut first gathered in faith, guided by the vision of Rev. Dr. Emanuel St. Juste.
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Today, that faithful beginning has blossomed into a vibrant presence across the state, with over two hundred members worshiping in a family of six churches.
+                    </p>
+                    <p class="text-gray-700">
+                        For over 22 years, through our ministry and in accordance with our Southern Baptist Convention beliefs, we have seen countless lives touched. We are more than a place to go; we are a people committed to proclaiming Jesus Christ as Lord, and we trust in His continued blessings as we carry His name forward.
+                    </p>
+                </div>
+                <div class="history-image">
+                    <img src="./ourStoryPng.PNG" alt="Church gathering">
+</div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="cta-section section">
+            <h3>Ready to join us?</h3>
+            <p>Find out what you can expect when you attend at one of our locations or online.</p>
+            <a href="./../services/services.html" class="cta-button">What to Expect</a>
+</a>
+        </section>
+        <div class="container section">
+        <!-- Leadership Grid Section -->
+        <section class="leadership-section ">
+            <h2 class="section-title section">Our Leadership</h2>
+            
+            <div class="leadership-grid">
+                <!-- Pastor 1 -->
+                <div class="pastor-card">
+                    <img class="section" src="./pastorPhoto.PNG">
+                    <div class="pastor-card-content">
+                        <h3 class="pastor-name">Frantz Calixte</h3>
+                        <p class="pastor-title ">Pastor</p>
+                        <a href="#" class="read-more-link " onclick="openLeaderModal('frantz'); return false;">
+                            Read more
+                            <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pastor 2 -->
+                <div class="pastor-card">
+                    <img class="section" src="./deacon1.PNG">
+                    <div class="pastor-card-content">
+                        <h3 class="pastor-name">Sauveur Joseph</h3>
+                        <p class="pastor-title">Deacon, Vice President</p>
+                        <a href="#" class="read-more-link" onclick="openLeaderModal('sauveur'); return false;">
+                            Read more
+                            <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pastor 3 -->
+                <div class="pastor-card">
+                    <img class="section" src="/about/deacon22.PNG">
+                    <div class="pastor-card-content">
+                        <h3 class="pastor-name">Roosevelt Legeon</h3>
+                        <p class="pastor-title">Deacon, Secretary, Pianist</p>
+                        <a href="#" class="read-more-link" onclick="openLeaderModal('roosevelt'); return false;">
+                            Read more
+                            <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pastor 4 -->
+                <div class="pastor-card">
+                    <img class="section" src="./deacon3.PNG" alt="Sam Roberts">
+                    <div class="pastor-card-content">
+                        <h3 class="pastor-name">Mimose Marie-Jules</h3>
+                        <p class="pastor-title">Deacon, Treasurer</p>
+                        <a href="#" class="read-more-link" onclick="openLeaderModal('mimose'); return false;">
+                            Read more
+                            <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leader Modal -->
+        <div id="leaderModal" class="leader-modal">
+            <div class="modal-overlay" onclick="closeLeaderModal()"></div>
+            <div class="modal-container">
+                <button class="modal-close" onclick="closeLeaderModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-content-wrapper">
+                    <div class="modal-image">
+                        <img id="modalImage" src="" alt="">
+                    </div>
+                    <div class="modal-text">
+                        <h3 id="modalTitle" class="modal-title"></h3>
+                        <div id="modalContent" class="modal-description"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <custom-footer></custom-footer>
+    <script src="./../components/footer.js"></script>
+
+    <script src="./about.js"></script>
+    <script src="./../components/header.js"></script>
+    <script src="./../script.js"></script>
+  </body>
+</html>

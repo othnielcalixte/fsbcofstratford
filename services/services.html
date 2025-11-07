@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services</title>
+    <link rel="stylesheet" href="./services.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="./../fsbcLogoRemovebg.png" />
+  </head>
+  <body>
+    <custom-navbar></custom-navbar>
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="heroContainer">
+          <h1 class="section">Our Services</h1>
+          <p class="hero-description section">
+            Join us in worship and fellowship throughout the week.
+          </p>
+          <div class="divider-line section"></div>
+          <p class="hero-subdescription section">
+            Whether online or in-person, there's a place for you to connect with
+            God and our community.
+          </p>
+        </div>
+      </section>
+
+      <!-- Weekly Schedule Section -->
+      <section class="schedule-section">
+        <h2 class="section-title section">Weekly Schedule</h2>
+
+        <!-- Tuesday Services -->
+        <div class="day-section section">
+          <div class="day-header">
+            <div class="day-icon">
+              <i class="fas fa-calendar-day"></i>
+            </div>
+            <h3 class="day-name">Tuesday</h3>
+          </div>
+
+          <div class="services-grid">
+            <!-- Mid-day Prayer -->
+            <div
+              class="service-card online-service section"
+              onclick="openConferenceModal('tuesday-prayer')"
+            >
+              <div class="service-time">
+                <i class="far fa-clock"></i>
+                <span>12:00 PM - 1:00 PM</span>
+              </div>
+              <h4 class="service-title">Mid-day Prayer Service</h4>
+              <div class="service-details">
+                <div class="detail-item">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>Conference Call</span>
+                </div>
+                <div class="detail-item">
+                  <i class="far fa-hourglass-half"></i>
+                  <span>1 hour</span>
+                </div>
+              </div>
+              <button class="call-details-btn">
+                <i class="fas fa-info-circle"></i>
+                View Call Details
+              </button>
+            </div>
+
+            <!-- Bible Study -->
+            <div
+              class="service-card online-service section"
+              onclick="openConferenceModal('tuesday-study')"
+            >
+              <div class="service-time">
+                <i class="far fa-clock"></i>
+                <span>7:00 PM - 9:30 PM</span>
+              </div>
+              <h4 class="service-title">Online Bible Study</h4>
+              <div class="service-details">
+                <div class="detail-item">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>Conference Call</span>
+                </div>
+                <div class="detail-item">
+                  <i class="far fa-hourglass-half"></i>
+                  <span>2.5 hours</span>
+                </div>
+              </div>
+              <button class="call-details-btn">
+                <i class="fas fa-info-circle"></i>
+                View Call Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Friday Services -->
+        <div class="day-section section">
+          <div class="day-header">
+            <div class="day-icon">
+              <i class="fas fa-calendar-day"></i>
+            </div>
+            <h3 class="day-name">Friday</h3>
+          </div>
+
+          <div class="services-grid">
+            <!-- Friday Online Service -->
+            <div
+              class="service-card online-service"
+              onclick="openConferenceModal('friday-service')"
+            >
+              <div class="service-time">
+                <i class="far fa-clock"></i>
+                <span>9:00 PM - 10:30 PM</span>
+              </div>
+              <h4 class="service-title">Online Church Service</h4>
+              <div class="service-details">
+                <div class="detail-item">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>Conference Call</span>
+                </div>
+                <div class="detail-item">
+                  <i class="far fa-hourglass-half"></i>
+                  <span>1.5 hours</span>
+                </div>
+              </div>
+              <button class="call-details-btn">
+                <i class="fas fa-info-circle"></i>
+                View Call Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sunday Services -->
+        <div class="day-section sunday-highlight section">
+          <div class="day-header">
+            <div class="day-icon">
+              <i class="fas fa-calendar-week"></i>
+            </div>
+            <h3 class="day-name">Sunday</h3>
+          </div>
+
+          <div class="services-grid">
+            <!-- Sunday Morning Service -->
+            <div class="service-card featured">
+              <div class="featured-badge">
+                <i class="fas fa-star"></i>
+                <span>Main Service</span>
+              </div>
+              <div class="service-time">
+                <i class="far fa-clock"></i>
+                <span>9:00 AM - 3:00 PM</span>
+              </div>
+              <h4 class="service-title">Sunday Morning Church Service</h4>
+              <div class="service-details">
+                <div class="detail-item">
+                  <i class="fas fa-church"></i>
+                  <span>In-Person</span>
+                </div>
+                <div class="detail-item">
+                  <i class="far fa-hourglass-half"></i>
+                  <span>6 hours</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sunday Evening Service -->
+            <div
+              class="service-card online-service section"
+              onclick="openConferenceModal('sunday-evening')"
+            >
+              <div class="service-time">
+                <i class="far fa-clock"></i>
+                <span>7:00 PM - 9:00 PM</span>
+              </div>
+              <h4 class="service-title">Online Evening Church Service</h4>
+              <div class="service-details">
+                <div class="detail-item">
+                  <i class="fas fa-phone-alt"></i>
+                  <span>Conference Call</span>
+                </div>
+                <div class="detail-item">
+                  <i class="far fa-hourglass-half"></i>
+                  <span>2 hours</span>
+                </div>
+              </div>
+              <button class="call-details-btn">
+                <i class="fas fa-info-circle"></i>
+                View Call Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section section">
+        <h3>Ready to join us?</h3>
+        <p>Experience worship and fellowship with us. All are welcome!</p>
+        <div class="cta-buttons">
+          <a
+            href="./../attendOnline/attendOnline.html"
+            class="cta-button primary"
+            >Join Online</a
+          >
+          <a
+            href="#"
+            class="cta-button secondary"
+            onclick="openLocationModal(); return false;"
+            >Get Directions</a
+          >
+        </div>
+      </section>
+
+      <!-- Additional Info Section -->
+      <section class="info-section section">
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <h3>Contact Us</h3>
+            <p>
+              Fell fee to reach out with any questions about our services or
+              schedule.
+            </p>
+            <a href="./../contact/contact.html" class="info-link"
+              >Learn More <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Location</h3>
+            <p>Find directions to our church and parking information.</p>
+            <a
+              href="#"
+              class="info-link"
+              onclick="openLocationModal(); return false;"
+              >Get Directions <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-video"></i>
+            </div>
+            <h3>Watch Online</h3>
+            <p>Can't make it in person? Join us online for live streaming.</p>
+            <a href="./../attendOnline/attendOnline.html" class="info-link"
+              >Watch Live <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Conference Call Modal -->
+    <div id="conferenceModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeConferenceModal()">&times;</span>
+        <div class="modal-header">
+          <i class="fas fa-phone-alt"></i>
+          <h2 id="modalTitle">Join Service via Conference Call</h2>
+        </div>
+        <div class="modal-body">
+          <div class="modal-service-info">
+            <h3 id="modalServiceName"></h3>
+            <p id="modalServiceTime"></p>
+          </div>
+
+          <div class="conference-instructions">
+            <h4><i class="fas fa-info-circle"></i> How to Join:</h4>
+            <ol>
+              <li>Dial the conference number</li>
+              <li>When prompted, enter the Meeting ID</li>
+              <li>You'll be connected to the service!</li>
+            </ol>
+          </div>
+
+          <div class="conference-details-section">
+            <label><i class="fas fa-phone"></i> Conference Number:</label>
+            <div class="phone-container">
+              <input
+                type="tel"
+                id="conferenceNumber"
+                value="(623) 600-3745"
+                readonly
+              />
+              <button onclick="copyNumber()" class="copy-btn">
+                <i class="far fa-copy"></i>
+                Copy
+              </button>
+            </div>
+          </div>
+
+          <div class="conference-details">
+            <div class="detail-row">
+              <label>Meeting ID:</label>
+              <span id="meetingId">778691</span>
+            </div>
+          </div>
+
+          <a id="joinCallBtn" href="tel:6236003745" class="join-call-btn">
+            <i class="fas fa-phone-alt"></i>
+            Call Now: (623) 600-3745
+          </a>
+
+          <p class="modal-note">
+            <i class="fas fa-mobile-alt"></i>
+            On mobile? Tap the button above to dial automatically. You'll still
+            need to enter the Meeting ID: <strong>778691</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Location Modal -->
+    <div id="locationModal" class="modal">
+      <div class="modal-content location-modal-content">
+        <span class="close" onclick="closeLocationModal()">&times;</span>
+        <div class="modal-header location-modal-header">
+          <i class="fas fa-map-marker-alt"></i>
+          <h2>Find Us</h2>
+        </div>
+        <div class="modal-body">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.394895477898!2d-73.09880612327954!3d41.191363471325474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e80cc926a1c491%3A0x9eabf7113d26d228!2s494%20Milford%20Point%20Rd%2C%20Milford%2C%20CT%2006460%2C%20USA!5e0!3m2!1sen!2snl!4v1762148272163!5m2!1sen!2snl"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen="allowfullscreen"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Church Location Map"
+            ></iframe>
+          </div>
+          <div class="map-info">
+            <p>
+              <i class="fas fa-car"></i>
+              <strong>Parking:</strong> Free parking available in our lot
+              adjacent to the church building.
+            </p>
+            <p>
+              <i class="fas fa-wheelchair"></i>
+              <strong>Accessibility:</strong> Our facility is wheelchair
+              accessible with ramps and accessible restrooms.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <custom-footer></custom-footer>
+    <script src="./../components/footer.js"></script>
+
+    <script src="./../components/header.js"></script>
+    <script src="./services.js"></script>
+    <script src="./../script.js"></script>
+  </body>
+</html>

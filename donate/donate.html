@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Give | Support Our Ministry</title>
+    <link rel="stylesheet" href="./donate.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="./../fsbcLogoRemovebg.png" />
+  </head>
+  <body>
+    <custom-navbar></custom-navbar>
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="heroContainer">
+          <h1>Give to Support Our Mission</h1>
+          <p class="hero-description">
+            Your generosity makes a lasting impact in our community and around
+            the world.
+          </p>
+          <div class="divider-line"></div>
+          <p class="hero-subdescription">
+            Every gift, no matter the size, helps us continue serving and
+            transforming lives.
+          </p>
+          <a
+            href="https://cash.app/$FSBCOFSTRATFORD"
+            target="_blank"
+            class="youtube-btn secondary"
+          >
+            <i class="fas fa-dollar-sign"></i>
+            Give Now via Cash App
+          </a>
+        </div>
+      </section>
+
+      <!-- Why Give Section -->
+      <section class="why-give-section">
+        <h2 class="section-title">Why Your Gift Matters</h2>
+        <p class="section-intro">
+          French Speaking Baptist Church of Stratford-Milford is a registered
+          501(c)(3) non-profit organization. Every dollar you give goes directly
+          toward fulfilling our mission to serve and uplift our community.
+        </p>
+
+        <div class="impact-grid">
+          <!-- Community Outreach -->
+          <div class="impact-card">
+            <div class="impact-icon">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <h3>Community Outreach</h3>
+            <p>
+              Your contributions support vital programs that serve our neighbors
+              in need. From food drives to community events, we actively work to
+              make a positive difference in Stratford-Milford and beyond.
+            </p>
+          </div>
+
+          <!-- Elder Care -->
+          <div class="impact-card">
+            <div class="impact-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Caring for the Elderly</h3>
+            <p>
+              We provide support, companionship, and assistance to our senior
+              members. Your gifts help us ensure that our elders receive the
+              care, respect, and dignity they deserve.
+            </p>
+          </div>
+
+          <!-- Support the Sick -->
+          <div class="impact-card">
+            <div class="impact-icon">
+              <i class="fas fa-hospital"></i>
+            </div>
+            <h3>Supporting the Sick</h3>
+            <p>
+              When illness strikes, we stand by our members with practical help,
+              prayer support, and compassion. Your generosity enables us to
+              provide care during life's most challenging moments.
+            </p>
+          </div>
+
+          <!-- Missions -->
+          <div class="impact-card">
+            <div class="impact-icon">
+              <i class="fas fa-globe-americas"></i>
+            </div>
+            <h3>Global Missions</h3>
+            <p>
+              Your partnership extends our reach beyond our local community to
+              support missions around the world. Together, we're sharing hope
+              and making an eternal impact in communities near and far.
+            </p>
+          </div>
+        </div>
+
+        <div class="nonprofit-badge">
+          <div class="badge-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div class="badge-content">
+            <h4>501(c)(3) Non-Profit Organization</h4>
+            <p>
+              All donations are tax-deductible to the fullest extent allowed by
+              law.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Giving Options Section -->
+      <section class="giving-section">
+        <h2 class="section-title">How to Give</h2>
+        <p class="section-description">
+          Choose the giving method that works best for you. Every contribution
+          makes a difference.
+        </p>
+
+        <div class="giving-options">
+          <!-- CashApp - Primary -->
+          <div class="giving-card cashapp-featured">
+            <div class="featured-tag">
+              <i class="fas fa-star"></i>
+              <span>Quick & Easy</span>
+            </div>
+            <div class="giving-icon cashapp-icon">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <h3>Give via Cash App</h3>
+            <p>
+              The fastest way to give! Send your donation instantly through Cash
+              App.
+            </p>
+            <div class="cashapp-details">
+              <div class="cashtag-display">
+                <span class="cashtag-label">Our Cash App:</span>
+                <div class="cashtag-value">
+                  <i class="fas fa-dollar-sign cashtag-icon"></i>
+                  <span id="cashtagText">FSBCOFSTRATFORD</span>
+                  <button
+                    onclick="copyCashtag(event)"
+                    class="copy-tag-btn"
+                    title="Copy to clipboard"
+                  >
+                    <i class="far fa-copy"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://cash.app/$FSBCOFSTRATFORD"
+              target="_blank"
+              class="give-btn cashapp-btn"
+            >
+              <i class="fas fa-dollar-sign"></i>
+              Give Now via Cash App
+            </a>
+            <p class="giving-note">
+              <i class="fas fa-info-circle"></i>
+              Opens Cash App or cash.app in your browser
+            </p>
+          </div>
+
+          <!-- In-Person -->
+          <div class="giving-card">
+            <div class="giving-icon">
+              <i class="fas fa-church"></i>
+            </div>
+            <h3>Give In-Person</h3>
+            <p>
+              Join us at any of our services and give through our offering
+              during worship.
+            </p>
+            <div class="service-times">
+              <div class="time-item">
+                <i class="fas fa-calendar-day"></i>
+                <span>Sunday Morning Service: 9:00 AM</span>
+              </div>
+              <div class="time-item">
+                <i class="fas fa-calendar-day"></i>
+                <span>Sunday Evening Service: 7:00 PM</span>
+              </div>
+            </div>
+            <a
+              href="./../services/services.html"
+              class="give-btn secondary-btn"
+            >
+              <i class="fas fa-calendar-alt"></i>
+              View All Services
+            </a>
+          </div>
+
+          <!-- By Mail -->
+          <div class="giving-card">
+            <div class="giving-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Give by Mail</h3>
+            <p>
+              Mail your check or money order to our church office. Make checks
+              payable to FSBC of Stratford-Milford.
+            </p>
+            <div class="mailing-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>French Speaking Baptist Church</strong><br />
+                494 Milford Point Rd<br />
+                Milford, CT 06460
+              </div>
+            </div>
+            <button onclick="copyAddress(event)" class="give-btn secondary-btn">
+              <i class="far fa-copy"></i>
+              Copy Address
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ways to Give Section -->
+      <section class="ways-section">
+        <h2 class="section-title">Other Ways to Give</h2>
+        <div class="ways-grid">
+          <div class="way-card">
+            <i class="fas fa-redo-alt"></i>
+            <h4>Recurring Giving</h4>
+            <p>
+              Set up automatic weekly or monthly donations through Cash App for
+              consistent support.
+            </p>
+          </div>
+          <div class="way-card">
+            <i class="fas fa-gift"></i>
+            <h4>Special Offerings</h4>
+            <p>
+              Contribute to specific missions, projects, or ministry needs
+              throughout the year.
+            </p>
+          </div>
+          <div class="way-card">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h4>Memorial Gifts</h4>
+            <p>
+              Honor a loved one with a memorial donation that celebrates their
+              legacy.
+            </p>
+          </div>
+          <div class="way-card">
+            <i class="fas fa-users"></i>
+            <h4>In-Kind Donations</h4>
+            <p>
+              Donate goods, services, or time to support our ministry efforts.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <h2 class="section-title">Questions About Giving</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question-circle"></i>
+              <h4>Is my donation tax-deductible?</h4>
+            </div>
+            <p class="faq-answer">
+              Yes! As a 501(c)(3) non-profit organization, all donations to FSBC
+              of Stratford-Milford are tax-deductible to the fullest extent
+              allowed by law. We'll provide documentation for your records.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question-circle"></i>
+              <h4>How secure is giving through Cash App?</h4>
+            </div>
+            <p class="faq-answer">
+              Cash App uses bank-level encryption and security measures to
+              protect your financial information. Your transaction goes directly
+              to our church's official Cash App account managed by our
+              treasurer.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question-circle"></i>
+              <h4>Can I designate my gift for a specific purpose?</h4>
+            </div>
+            <p class="faq-answer">
+              Absolutely! When giving through Cash App, include a note
+              specifying how you'd like your gift to be used (e.g., "Missions,"
+              "Youth Ministry," "Building Fund"). For other giving methods,
+              please contact our office.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question-circle"></i>
+              <h4>What if I need a donation receipt?</h4>
+            </div>
+            <p class="faq-answer">
+              We provide annual giving statements for tax purposes. For
+              immediate receipts or questions about your donation, please
+              contact our church office or treasurer.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Thank You Section -->
+      <section class="thank-you-section">
+        <div class="thank-you-content">
+          <i class="fas fa-heart"></i>
+          <h2>Thank You for Your Generosity</h2>
+          <p>
+            Your faithful giving enables us to continue our mission of spreading
+            the Gospel, serving our community, and making a difference in lives
+            around the world. We are deeply grateful for your partnership in
+            ministry.
+          </p>
+          <blockquote>
+            "Each of you should give what you have decided in your heart to
+            give, not reluctantly or under compulsion, for God loves a cheerful
+            giver." - 2 Corinthians 9:7
+          </blockquote>
+        </div>
+      </section>
+    </main>
+    <custom-footer></custom-footer>
+    <script src="./../components/footer.js"></script>
+    <script src="./../components/header.js"></script>
+    <script src="./donate.js"></script>
+  </body>
+</html>

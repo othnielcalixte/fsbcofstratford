@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./contact.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="./../fsbcLogoRemovebg.png" />
+  </head>
+  <body>
+    <custom-navbar></custom-navbar>
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="heroContainer">
+          <h1>Get in Touch</h1>
+          <p class="hero-description">
+            We'd love to hear from you! Whether you have questions, need prayer,
+            or want to learn more about our church.
+          </p>
+          <div class="divider-line"></div>
+          <p class="hero-subdescription">
+            Our team is here to help and support you on your spiritual journey.
+          </p>
+        </div>
+      </section>
+
+      <!-- Quick Contact Options -->
+      <section class="quick-contact-section">
+        <h2 class="section-title">How Can We Help?</h2>
+        <div class="quick-contact-grid">
+          <!-- Call Option -->
+          <div class="quick-contact-card call-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>Speak with Someone</h3>
+            <p>
+              Need mental health help and support? Call our faith line. We’re
+              here to walk alongside.
+            </p>
+            <div class="phone-display">
+              <i class="fas fa-phone"></i>
+              <span class="phone-number">(866) 903-3787</span>
+            </div>
+            <a href="tel:+18669033787" class="contact-btn call-btn">
+              <i class="fas fa-phone-alt"></i>
+              Call Now
+            </a>
+            <p class="availability">
+              <i class="far fa-clock"></i>
+              Available: Mon-Fri 9AM-5PM, Sun 8AM-8PM
+            </p>
+          </div>
+
+          <!-- Email Option -->
+          <div class="quick-contact-card email-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Send Us a Message</h3>
+            <p>
+              Fill out the contact form below and we'll get back to you within
+              24-48 hours.
+            </p>
+            <div class="email-display">
+              <i class="fas fa-envelope"></i>
+              <span class="email-address">FSBCStratford@proton.me</span>
+            </div>
+            <a href="#contact-form" class="contact-btn email-btn">
+              <i class="fas fa-paper-plane"></i>
+              Fill Out Form
+            </a>
+            <p class="availability">
+              <i class="far fa-clock"></i>
+              We respond within 24-48 hours
+            </p>
+          </div>
+
+          <!-- Visit Option -->
+          <div class="quick-contact-card visit-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Visit Our Church</h3>
+            <p>
+              Join us for worship or stop by our office during business hours.
+            </p>
+            <div class="address-display">
+              <i class="fas fa-church"></i>
+              <span class="address-text">
+                494 Milford Point Rd<br />
+                Milford, CT 06460
+              </span>
+            </div>
+            <a href="#location-map" class="contact-btn visit-btn">
+              <i class="fas fa-map-marked-alt"></i>
+              Get Directions
+            </a>
+            <p class="availability">
+              <i class="far fa-clock"></i>
+              Office Hours: Mon-Fri 9AM-4PM
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section class="contact-form-section" id="contact-form">
+        <div class="form-container">
+          <div class="form-header">
+            <h2>Send Us a Message</h2>
+            <p>
+              Fill out the form below and a member of our team will get back to
+              you soon.
+            </p>
+          </div>
+
+          <form id="contactForm" class="contact-form">
+            <!-- Name Fields -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">
+                  First Name <span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  required
+                  placeholder="Enter your first name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="lastName">
+                  Last Name <span class="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  required
+                  placeholder="Enter your last name"
+                />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">
+                Email Address <span class="required">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="your.email@example.com"
+              />
+            </div>
+
+            <!-- Phone (Optional) -->
+            <div class="form-group">
+              <label for="phone">
+                Phone Number <span class="optional">(optional)</span>
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="(203) 555-0100"
+              />
+            </div>
+
+            <!-- Reason for Contact -->
+            <div class="form-group">
+              <label for="reason">
+                What can we help you with? <span class="required">*</span>
+              </label>
+              <select id="reason" name="reason" required>
+                <option value="">Select a reason...</option>
+                <option value="prayer">Prayer Request</option>
+                <option value="visit">I'd like to visit</option>
+                <option value="membership">Membership Information</option>
+                <option value="baptism">Baptism</option>
+                <option value="counseling">Pastoral Counseling</option>
+                <option value="events">Church Events</option>
+                <option value="volunteer">Volunteer Opportunities</option>
+                <option value="giving">Questions About Giving</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="message">
+                Your Message <span class="required">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+                placeholder="Tell us how we can help you..."
+              ></textarea>
+              <span class="char-count">
+                <span id="charCount">0</span> / 1000 characters
+              </span>
+            </div>
+
+            <!-- Privacy Notice -->
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="privacy" name="privacy" required />
+                <span>
+                  I agree that my information may be used to contact me
+                  regarding my inquiry. We respect your privacy and will never
+                  share your information with third parties.
+                </span>
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i>
+              Send Message
+            </button>
+
+            <!-- Success/Error Messages -->
+            <div id="formMessage" class="form-message"></div>
+          </form>
+        </div>
+
+        <!-- Contact Info Sidebar -->
+        <div class="contact-info-sidebar">
+          <div class="info-card">
+            <h3>
+              <i class="fas fa-info-circle"></i>
+              Contact Information
+            </h3>
+            <div class="info-items">
+              <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:+12035550100">(203) 360-9370</a>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:fsbcst18@gmail.com"
+                    >FSBCStratford@proton.me</a
+                  >
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <strong>Address</strong>
+                  <span>
+                    494 Milford Point Rd<br />
+                    Milford, CT 06460
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>
+              <i class="far fa-clock"></i>
+              Office Hours
+            </h3>
+            <div class="hours-list">
+              <div class="hours-item">
+                <span class="day">Monday - Friday</span>
+                <span class="time">9:00 AM - 4:00 PM</span>
+              </div>
+              <div class="hours-item">
+                <span class="day">Saturday</span>
+                <span class="time">Closed</span>
+              </div>
+              <div class="hours-item">
+                <span class="day">Sunday</span>
+                <span class="time">8:00 AM - 8:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card social-card">
+            <h3>
+              <i class="fas fa-share-alt"></i>
+              Connect With Us
+            </h3>
+            <div class="social-links">
+              <a
+                href="https://www.tiktok.com/@fsbcstratford?_r=1&_t=ZP-916pr74N7lu"
+                class="social-link facebook"
+                title="TikTok"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/fsbcofstratford?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                class="social-link instagram"
+                title="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@frenchspeakingbaptistchurc9812"
+                class="social-link youtube"
+                title="YouTube"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Emergency Contact Section -->
+      <!-- <section class="emergency-section">
+        <div class="emergency-content">
+          <i class="fas fa-exclamation-circle"></i>
+          <h2>Need Immediate Prayer or Support?</h2>
+          <p>
+            If you're facing an urgent situation and need prayer or spiritual
+            support right now, please don't hesitate to call our faith line. A
+            caring member of our pastoral team is ready to listen and pray with
+            you.
+          </p>
+          <a href="tel:+12035550100" class="emergency-btn">
+            <i class="fas fa-phone-volume"></i>
+            Call Our Faith Line: (203) 555-0100
+          </a>
+          <p class="emergency-note">
+            For life-threatening emergencies, please call 911 or go to your
+            nearest emergency room.
+          </p>
+        </div>
+      </section> -->
+
+      <!-- Location Map Section -->
+      <section class="map-section" id="location-map">
+        <h2 class="section-title">Find Us</h2>
+        <div class="map-container">
+          <!-- Replace with your actual Google Maps embed code -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.394895477898!2d-73.09880612327954!3d41.191363471325474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e80cc926a1c491%3A0x9eabf7113d26d228!2s494%20Milford%20Point%20Rd%2C%20Milford%2C%20CT%2006460%2C%20USA!5e0!3m2!1sen!2snl!4v1762148272163!5m2!1sen!2snl"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen="allowfullscreen"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Church Location Map"
+          ></iframe>
+        </div>
+        <div class="map-info">
+          <p>
+            <i class="fas fa-car"></i>
+            <strong>Parking:</strong> Free parking available in our lot adjacent
+            to the church building.
+          </p>
+          <p>
+            <i class="fas fa-wheelchair"></i>
+            <strong>Accessibility:</strong> Our facility is wheelchair
+            accessible with ramps and accessible restrooms.
+          </p>
+        </div>
+      </section>
+    </main>
+    <custom-footer></custom-footer>
+    <script src="./../components/footer.js"></script>
+
+    <script src="./../components/header.js"></script>
+    <script src="./contact.js"></script>
+  </body>
+</html>

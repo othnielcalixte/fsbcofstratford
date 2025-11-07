@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attend Online</title>
+    <link rel="stylesheet" href="./attendOnline.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="./../fsbcLogoRemovebg.png" />
+  </head>
+
+  <body>
+    <custom-navbar></custom-navbar>
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="heroContainer">
+          <h1>Attend Online</h1>
+          <p class="hero-description">
+            Join us from anywhere in the world. Worship with us online through
+            conference call or watch our live services on YouTube.
+          </p>
+          <div class="divider-line"></div>
+          <p class="hero-subdescription">
+            Can't make it in person? No problem! Connect with our community
+            online and experience the same worship and fellowship.
+          </p>
+        </div>
+      </section>
+
+      <!-- Conference Call Services Section -->
+      <section class="conference-section">
+        <div class="section-header">
+          <i class="fas fa-phone-alt conference-icon-large"></i>
+          <h2 class="section-title">Join via Conference Call</h2>
+          <p class="section-description">
+            Participate in our live interactive services through our conference
+            call line. Click on any service below to view the dial-in details.
+          </p>
+        </div>
+
+        <div class="conference-services-grid">
+          <!-- Tuesday Mid-day Prayer -->
+          <div
+            class="conference-card"
+            onclick="openConferenceModal('tuesday-prayer')"
+          >
+            <div class="conference-card-header">
+              <i class="fas fa-calendar-day"></i>
+              <h3>Tuesday</h3>
+            </div>
+            <div class="conference-card-content">
+              <h4>Mid-day Prayer Service</h4>
+              <div class="conference-time">
+                <i class="far fa-clock"></i>
+                <span>12:00 PM - 1:00 PM</span>
+              </div>
+              <button class="conference-btn">
+                <i class="fas fa-phone-alt"></i>
+                View Call Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Tuesday Bible Study -->
+          <div
+            class="conference-card"
+            onclick="openConferenceModal('tuesday-study')"
+          >
+            <div class="conference-card-header">
+              <i class="fas fa-calendar-day"></i>
+              <h3>Tuesday</h3>
+            </div>
+            <div class="conference-card-content">
+              <h4>Online Bible Study</h4>
+              <div class="conference-time">
+                <i class="far fa-clock"></i>
+                <span>7:00 PM - 9:30 PM</span>
+              </div>
+              <button class="conference-btn">
+                <i class="fas fa-phone-alt"></i>
+                View Call Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Friday Service -->
+          <div
+            class="conference-card"
+            onclick="openConferenceModal('friday-service')"
+          >
+            <div class="conference-card-header">
+              <i class="fas fa-calendar-day"></i>
+              <h3>Friday</h3>
+            </div>
+            <div class="conference-card-content">
+              <h4>Online Church Service</h4>
+              <div class="conference-time">
+                <i class="far fa-clock"></i>
+                <span>9:00 PM - 10:30 PM</span>
+              </div>
+              <button class="conference-btn">
+                <i class="fas fa-phone-alt"></i>
+                View Call Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Sunday Evening Service -->
+          <div
+            class="conference-card"
+            onclick="openConferenceModal('sunday-evening')"
+          >
+            <div class="conference-card-header">
+              <i class="fas fa-calendar-week"></i>
+              <h3>Sunday</h3>
+            </div>
+            <div class="conference-card-content">
+              <h4>Evening Church Service</h4>
+              <div class="conference-time">
+                <i class="far fa-clock"></i>
+                <span>7:00 PM - 9:00 PM</span>
+              </div>
+              <button class="conference-btn">
+                <i class="fas fa-phone-alt"></i>
+                View Call Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- YouTube Live Section -->
+      <section class="youtube-section">
+        <div class="section-header">
+          <i class="fab fa-youtube youtube-icon-large"></i>
+          <h2 class="section-title">Watch on YouTube</h2>
+          <p class="section-description">
+            Join us live every Sunday morning or catch up on previous services
+            you may have missed.
+          </p>
+        </div>
+
+        <!-- Live Sunday Banner -->
+        <div class="live-banner">
+          <div class="live-banner-content">
+            <div class="live-indicator">
+              <span class="live-dot"></span>
+              <span class="live-text">LIVE SUNDAYS</span>
+            </div>
+            <h3>Sunday Morning Service</h3>
+            <p>Join us live every Sunday at 9:00 AM</p>
+            <a
+              href="https://www.youtube.com/@frenchspeakingbaptistchurc9812"
+              target="_blank"
+              class="youtube-btn primary"
+            >
+              <i class="fab fa-youtube"></i>
+              Go to Our YouTube Channel
+            </a>
+          </div>
+        </div>
+
+        <!-- Recent Services -->
+        <div class="recent-services">
+          <h3 class="subsection-title">Recent Services</h3>
+          <p class="subsection-description">
+            Watch our recent Sunday services below or visit our YouTube channel
+            for our complete archive.
+          </p>
+
+          <div class="videos-grid">
+            <!-- Video 1 - Replace VIDEO_ID_1 with actual YouTube video ID -->
+            <div class="video-card">
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/URD_diUZXFY?si=LOqPJwFPS4cKc9La"
+                  title="Sunday Service 1"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="video-info">
+                <h4>Sunday Morning Service</h4>
+                <p class="video-date">
+                  <i class="far fa-calendar"></i>
+                  Date: 12 January 2025
+                </p>
+              </div>
+            </div>
+
+            <!-- Video 2 - Replace VIDEO_ID_2 with actual YouTube video ID -->
+            <div class="video-card">
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/9PLj3OlFHHI?si=OfdWyja_qTnpynS9"
+                  title="Sunday Service 2"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="video-info">
+                <h4>Sunday Morning Service</h4>
+                <p class="video-date">
+                  <i class="far fa-calendar"></i>
+                  Date: 19 October 2025
+                </p>
+              </div>
+            </div>
+
+            <!-- Video 3 - Replace VIDEO_ID_3 with actual YouTube video ID -->
+            <div class="video-card">
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/Yd8mKa90ups?si=wx8fZL_4oMzvCj5m"
+                  title="Sunday Service 3"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="video-info">
+                <h4>Sunday Morning Service</h4>
+                <p class="video-date">
+                  <i class="far fa-calendar"></i>
+                  Date: 26 October 2025
+                </p>
+              </div>
+            </div>
+
+            <!-- Video 4 - Replace VIDEO_ID_4 with actual YouTube video ID -->
+            <div class="video-card">
+              <div class="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/7ptrDuShEOg?si=D0xbjT6p0vBioJcY"
+                  title="Sunday Service 4"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="video-info">
+                <h4>Sunday Morning Service</h4>
+                <p class="video-date">
+                  <i class="far fa-calendar"></i>
+                  Date: 2 November 2025
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="view-more">
+            <a
+              href="https://www.youtube.com/@frenchspeakingbaptistchurc9812"
+              target="_blank"
+              class="youtube-btn secondary"
+            >
+              <i class="fab fa-youtube"></i>
+              View All Services on YouTube
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Help Section -->
+      <section class="help-section">
+        <h2 class="section-title">Need Help?</h2>
+        <div class="help-grid">
+          <div class="help-card">
+            <div class="help-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3>First Time on Conference Call?</h3>
+            <p>
+              Simply dial the number and enter the Meeting ID when prompted. No
+              app or download required!
+            </p>
+            <a href="tel:6236003745" class="help-link">
+              Call Now: (623) 600-3745 <i class="fas fa-phone"></i>
+            </a>
+          </div>
+
+          <!-- <div class="help-card">
+            <div class="help-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3>Technical Support</h3>
+            <p>
+              Having trouble connecting? Our tech team is here to help you join
+              the service.
+            </p>
+            <a href="./../contact/contact.html" class="help-link">
+              Contact Support <i class="fas fa-arrow-right"></i>
+            </a>
+          </div> -->
+
+          <div class="help-card">
+            <div class="help-icon">
+              <i class="fas fa-bell"></i>
+            </div>
+            <h3>Get Reminders</h3>
+            <p>
+              Subscribe to our YouTube channel and enable notifications to never
+              miss a service.
+            </p>
+            <a
+              href="https://www.youtube.com/@frenchspeakingbaptistchurc9812"
+              target="_blank"
+              class="help-link"
+            >
+              Subscribe Now <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Conference Call Modal -->
+    <div id="conferenceModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeConferenceModal()">&times;</span>
+        <div class="modal-header">
+          <i class="fas fa-phone-alt"></i>
+          <h2 id="modalTitle">Join Service via Conference Call</h2>
+        </div>
+        <div class="modal-body">
+          <div class="modal-service-info">
+            <h3 id="modalServiceName"></h3>
+            <p id="modalServiceTime"></p>
+          </div>
+
+          <div class="conference-instructions">
+            <h4><i class="fas fa-info-circle"></i> How to Join:</h4>
+            <ol>
+              <li>Dial the conference number</li>
+              <li>When prompted, enter the Meeting ID</li>
+              <li>You'll be connected to the service!</li>
+            </ol>
+          </div>
+
+          <div class="conference-details-section">
+            <label><i class="fas fa-phone"></i> Conference Number:</label>
+            <div class="phone-container">
+              <input
+                type="tel"
+                id="conferenceNumber"
+                value="(623) 600-3745"
+                readonly
+              />
+              <button onclick="copyNumber()" class="copy-btn">
+                <i class="far fa-copy"></i>
+                Copy
+              </button>
+            </div>
+          </div>
+
+          <div class="conference-details">
+            <div class="detail-row">
+              <label>Meeting ID:</label>
+              <span id="meetingId">778691</span>
+            </div>
+          </div>
+
+          <a id="joinCallBtn" href="tel:6236003745" class="join-call-btn">
+            <i class="fas fa-phone-alt"></i>
+            Call Now: (623) 600-3745
+          </a>
+
+          <p class="modal-note">
+            <i class="fas fa-mobile-alt"></i>
+            On mobile? Tap the button above to dial automatically. You'll still
+            need to enter the Meeting ID: <strong>778691</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <custom-footer></custom-footer>
+    <script src="./../components/footer.js"></script>
+
+    <script src="./../components/header.js"></script>
+    <script src="./attendOnline.js"></script>
+  </body>
+</html>

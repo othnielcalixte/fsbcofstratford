@@ -1,0 +1,777 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+:root {
+  --primary-color: #4a6fa5;
+  --primary-dark: #3a5a80;
+  --secondary-color: #d4a59a;
+  --accent-color: #ec3507;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --text-color: #333;
+  --text-light: #6c757d;
+  --white: #ffffff;
+  --black: #000000;
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Playfair Display", serif;
+  --transition: all 0.3s ease;
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --border-radius: 50px;
+  --cashapp-green: #00d64f;
+  --cashapp-dark: #00b043;
+  --success-color: #28a745;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-color);
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+}
+
+.heroContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-section h1 {
+  margin-top: 70px;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.divider-line {
+  width: 100px;
+  height: 2px;
+  background-color: var(--black);
+  margin: 0 auto 2rem;
+}
+
+.hero-subdescription {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.youtube-btn {
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+.youtube-btn.secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.youtube-btn.secondary:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Section Styles */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-description {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* Why Give Section */
+.why-give-section {
+  margin-bottom: 5rem;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.impact-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 25px rgba(74, 111, 165, 0.2);
+}
+
+.impact-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-dark)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.impact-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.impact-card p {
+  color: var(--text-light);
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Non-Profit Badge */
+.nonprofit-badge {
+  background: linear-gradient(135deg, var(--accent-color), #d12d00);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: white;
+  box-shadow: var(--box-shadow);
+}
+
+.badge-icon {
+  font-size: 4rem;
+  flex-shrink: 0;
+}
+
+.badge-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.badge-content p {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* Giving Section */
+.giving-section {
+  margin-bottom: 5rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.giving-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .giving-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.giving-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  max-width: 100%;
+}
+
+.giving-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cashapp-featured {
+  border: 3px solid var(--cashapp-green);
+  background: linear-gradient(135deg, #ffffff 0%, #f0fff5 100%);
+}
+
+.featured-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-bottom-left-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.giving-icon {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-dark)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.cashapp-icon {
+  background: linear-gradient(
+    135deg,
+    var(--cashapp-green),
+    var(--cashapp-dark)
+  );
+}
+
+.giving-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.giving-card > p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+/* CashApp Details */
+.cashapp-details {
+  margin: 2rem 0;
+}
+
+.cashtag-display {
+  background: var(--light-color);
+  border: 2px solid var(--cashapp-green);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.cashtag-label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.cashtag-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cashapp-green);
+}
+
+.cashtag-icon {
+  font-size: 1.25rem;
+}
+
+.copy-tag-btn {
+  background: var(--cashapp-green);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.copy-tag-btn:hover {
+  background: var(--cashapp-dark);
+  transform: scale(1.05);
+}
+
+/* Service Times */
+.service-times {
+  background: var(--light-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.time-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.time-item i {
+  color: var(--primary-color);
+}
+
+/* Mailing Address */
+.mailing-address {
+  background: var(--light-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1rem;
+  text-align: left;
+}
+
+.mailing-address i {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.mailing-address div {
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+/* Give Buttons */
+.give-btn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.cashapp-btn {
+  background: var(--cashapp-green);
+  color: white;
+}
+
+.cashapp-btn:hover {
+  background: var(--cashapp-dark);
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 214, 79, 0.3);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.secondary-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: scale(1.02);
+}
+
+.giving-note {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Ways Section */
+.ways-section {
+  margin-bottom: 5rem;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+.ways-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .ways-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .ways-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.way-card {
+  text-align: center;
+  padding: 2rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.way-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(74, 111, 165, 0.2);
+}
+
+.way-card i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.way-card h4 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.way-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* FAQ Section */
+.faq-section {
+  margin-bottom: 5rem;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.faq-question i {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.faq-question h4 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.faq-answer {
+  color: var(--text-light);
+  line-height: 1.7;
+  padding-left: 2.5rem;
+}
+
+/* Thank You Section */
+.thank-you-section {
+  margin-bottom: 5rem;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-dark)
+  );
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.thank-you-content {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.thank-you-content i {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+}
+
+.thank-you-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.thank-you-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.thank-you-content blockquote {
+  font-size: 1.1rem;
+  font-style: italic;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 1.5rem;
+  margin: 2rem 0 0;
+  opacity: 0.95;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+    margin-top: 50px;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .hero-subdescription {
+    font-size: 1rem;
+  }
+
+  .nonprofit-badge {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .badge-icon {
+    font-size: 3rem;
+  }
+
+  .giving-options,
+  .impact-grid,
+  .ways-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .giving-card {
+    padding: 2rem 1.5rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cashtag-value {
+    font-size: 1.25rem;
+  }
+
+  .thank-you-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .thank-you-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 449px) {
+  .main-content {
+    padding: 1rem 0.75rem;
+  }
+
+  .giving-section {
+    width: 100%;
+    padding: 0;
+  }
+
+  .giving-options {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .giving-card {
+    padding: 1.5rem 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .cashtag-display {
+    padding: 1rem;
+  }
+
+  .cashtag-value {
+    font-size: 1.1rem;
+    flex-wrap: wrap;
+  }
+
+  .copy-tag-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .giving-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  .giving-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .mailing-address {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-times {
+    padding: 1rem;
+  }
+
+  .time-item {
+    font-size: 0.9rem;
+  }
+
+  .why-give-section,
+  .ways-section {
+    padding: 2rem 1rem;
+  }
+
+  .impact-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Copy Success Animation */
+@keyframes copySuccess {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.copy-success {
+  animation: copySuccess 0.3s ease;
+}
