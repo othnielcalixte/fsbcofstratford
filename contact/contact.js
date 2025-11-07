@@ -1,19 +1,19 @@
 // Character counter for message textarea
-document.addEventListener('DOMContentLoaded', function() {
-  const messageTextarea = document.getElementById('message');
-  const charCountSpan = document.getElementById('charCount');
+document.addEventListener("DOMContentLoaded", function () {
+  const messageTextarea = document.getElementById("message");
+  const charCountSpan = document.getElementById("charCount");
   const maxChars = 1000;
 
   if (messageTextarea && charCountSpan) {
-    messageTextarea.addEventListener('input', function() {
+    messageTextarea.addEventListener("input", function () {
       const currentLength = this.value.length;
       charCountSpan.textContent = currentLength;
 
       // Change color if approaching limit
       if (currentLength > maxChars * 0.9) {
-        charCountSpan.style.color = 'var(--accent-color)';
+        charCountSpan.style.color = "var(--accent-color)";
       } else {
-        charCountSpan.style.color = 'var(--text-light)';
+        charCountSpan.style.color = "var(--text-light)";
       }
 
       // Enforce limit
@@ -25,26 +25,27 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Form submission
+  /*
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       handleFormSubmit(this);
     });
-  }
+  }*/
 
   // Smooth scroll for anchor links
   const anchorLinks = document.querySelectorAll('a[href^="#"]');
-  anchorLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href !== '#') {
+  anchorLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (href !== "#") {
         e.preventDefault();
         const target = document.querySelector(href);
         if (target) {
           target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+            behavior: "smooth",
+            block: "start",
           });
         }
       }
@@ -55,8 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // Handle form submission
 function handleFormSubmit(form) {
   const formData = new FormData(form);
-  const submitBtn = form.querySelector('.submit-btn');
-  const formMessage = document.getElementById('formMessage');
+  const submitBtn = form.querySelector(".submit-btn");
+  const formMessage = document.getElementById("formMessage");
 
   // Disable submit button
   submitBtn.disabled = true;
@@ -64,27 +65,33 @@ function handleFormSubmit(form) {
 
   // Collect form data
   const data = {
-    firstName: formData.get('firstName'),
-    lastName: formData.get('lastName'),
-    email: formData.get('email'),
-    phone: formData.get('phone') || 'Not provided',
-    reason: formData.get('reason'),
-    message: formData.get('message'),
-    timestamp: new Date().toISOString()
+    firstName: formData.get("firstName"),
+    lastName: formData.get("lastName"),
+    email: formData.get("email"),
+    phone: formData.get("phone") || "Not provided",
+    reason: formData.get("reason"),
+    message: formData.get("message"),
+    timestamp: new Date().toISOString(),
   };
 
   // Here you would normally send the data to your server
   // For now, we'll simulate a successful submission
   simulateFormSubmission(data)
-    .then(response => {
+    .then((response) => {
       // Success
-      showFormMessage('success', 'Thank you for your message! We\'ll get back to you within 24-48 hours.');
+      showFormMessage(
+        "success",
+        "Thank you for your message! We'll get back to you within 24-48 hours."
+      );
       form.reset();
-      document.getElementById('charCount').textContent = '0';
+      document.getElementById("charCount").textContent = "0";
     })
-    .catch(error => {
+    .catch((error) => {
       // Error
-      showFormMessage('error', 'Oops! Something went wrong. Please try again or call us directly at (203) 555-0100.');
+      showFormMessage(
+        "error",
+        "Oops! Something went wrong. Please try again or call us directly at (203) 555-0100."
+      );
     })
     .finally(() => {
       // Re-enable submit button
@@ -97,7 +104,7 @@ function handleFormSubmit(form) {
 function simulateFormSubmission(data) {
   return new Promise((resolve, reject) => {
     // Log the data (in production, this would be sent to your server)
-    console.log('Form submission data:', data);
+    console.log("Form submission data:", data);
 
     // Simulate network delay
     setTimeout(() => {
@@ -112,16 +119,16 @@ function simulateFormSubmission(data) {
 
 // Show form message
 function showFormMessage(type, message) {
-  const formMessage = document.getElementById('formMessage');
-  formMessage.className = 'form-message ' + type;
+  const formMessage = document.getElementById("formMessage");
+  formMessage.className = "form-message " + type;
   formMessage.textContent = message;
 
   // Scroll to message
-  formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  formMessage.scrollIntoView({ behavior: "smooth", block: "nearest" });
 
   // Auto-hide after 10 seconds
   setTimeout(() => {
-    formMessage.style.display = 'none';
+    formMessage.style.display = "none";
   }, 10000);
 }
 
@@ -138,26 +145,26 @@ function validatePhone(phone) {
 }
 
 // Add real-time validation
-document.addEventListener('DOMContentLoaded', function() {
-  const emailInput = document.getElementById('email');
-  const phoneInput = document.getElementById('phone');
+document.addEventListener("DOMContentLoaded", function () {
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
 
   if (emailInput) {
-    emailInput.addEventListener('blur', function() {
+    emailInput.addEventListener("blur", function () {
       if (this.value && !validateEmail(this.value)) {
-        this.style.borderColor = 'var(--error-color)';
+        this.style.borderColor = "var(--error-color)";
       } else {
-        this.style.borderColor = '#e5e7eb';
+        this.style.borderColor = "#e5e7eb";
       }
     });
   }
 
   if (phoneInput) {
-    phoneInput.addEventListener('blur', function() {
+    phoneInput.addEventListener("blur", function () {
       if (this.value && !validatePhone(this.value)) {
-        this.style.borderColor = 'var(--error-color)';
+        this.style.borderColor = "var(--error-color)";
       } else {
-        this.style.borderColor = '#e5e7eb';
+        this.style.borderColor = "#e5e7eb";
       }
     });
   }
